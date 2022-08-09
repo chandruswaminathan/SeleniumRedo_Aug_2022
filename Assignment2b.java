@@ -1,23 +1,29 @@
-package week1.day1;
+package week1.day2;
+
+import java.util.Arrays;
 
 public class Assignment2b {
-	//To convert Negative number to Positive number
+
 	public static void main(String[] args) {
-		
-		int num = -40;
-		
-		if(num<0)
+		//Declare An array for {3,2,11,4,6,7};
+		int[] a = {3,2,11,4,6,7};
+		Arrays.sort(a);
+		int arr1 = a.length;
+		//Declare another array for {1,2,8,4,9,7};
+		int[] b = {1,2,8,4,9,7};
+		Arrays.sort(b);
+		int arr2 = b.length;
+		//Declare for loop iterator from 0 to array length
+		for(int i = 0; i < arr1; i++)
 		{
-			int newNum = -(num);
-			System.out.println("The Negative number "+num+" has been converted to Positive number: "+newNum);
-		}
-		else if(num>0)
-		{
-			System.out.println("The entered number is already a Positive number: "+num);
-		}
-		else
-		{
-			System.out.println("The entered number is neither Positive nor Negative: "+num);
+			//Declare a nested for another array from 0 to array length
+			for(int j = 0; j < arr2; j++)
+			{
+				if(a[i]==b[j])
+				{
+					System.out.println(a[i]);
+				}
+			}
 		}
 
 	}
